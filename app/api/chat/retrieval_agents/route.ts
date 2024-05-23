@@ -60,17 +60,20 @@ export async function POST(req: NextRequest) {
       streaming: true,
     });
 
+    const user_id = 2;
+
     const client = createClient(
       process.env.SUPABASE_URL!,
       process.env.SUPABASE_PRIVATE_KEY!,
     );
+
     const vectorstore = new SupabaseVectorStore(new OpenAIEmbeddings(), {
       client,
       tableName: "documents",
       queryName: "match_documents",
     });
 
-    const retriever = vectorstore.asRetriever();
+    const retriever = vectorstore.asRetriever({filter: { userId: 2 }});
 
     /**
      * Wrap the retriever in a tool to present it to the agent in a
