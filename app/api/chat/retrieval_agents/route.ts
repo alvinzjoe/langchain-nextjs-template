@@ -73,7 +73,7 @@ export async function POST(req: NextRequest) {
       queryName: "match_documents",
     });
 
-    const retriever = vectorstore.asRetriever({filter: { userId: 2 }});
+    const retriever = vectorstore.asRetriever({filter: { userId: user_id }});
 
     /**
      * Wrap the retriever in a tool to present it to the agent in a
