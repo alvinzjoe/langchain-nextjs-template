@@ -11,6 +11,6 @@ export async function GET(req: NextRequest) {
     }
   
     // Return the environment variable in the response
-    return NextResponse.json({ api: openAIKey }, { status: 200 });
+    return NextResponse.json({ api: "openAIKey" }, { status: 200 });
   }
   
