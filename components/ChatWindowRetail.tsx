@@ -115,7 +115,7 @@ export function ChatWindowRetail(props: {
     <div className={`relative flex flex-col items-center p-4 md:p-8 px-0 md:px-8 rounded grow overflow-hidden ${(messages.length > 0 ? "border-0" : "")}`}>
       <h2 className={`${messages.length > 0 ? "" : "hidden"} text-2xl mb-8`}>{emoji} {titleText}</h2>
       <div
-        className="flex flex-col-reverse w-full mb-4 overflow-auto transition-[flex-grow] ease-in-out pb-5"
+        className="flex flex-col-reverse w-full mb-10 overflow-auto transition-[flex-grow] ease-in-out pb-5 grow"
         ref={messageContainerRef}
       >
         {messages.length > 0 ? (
