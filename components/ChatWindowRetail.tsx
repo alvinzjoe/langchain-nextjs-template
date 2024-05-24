@@ -39,6 +39,7 @@ export function ChatWindowRetail(props: {
   const { messages, input, setInput, handleInputChange, handleSubmit, isLoading: chatEndpointIsLoading, setMessages } =
     useChat({
       api: endpoint,
+      streamMode: 'text',
       onResponse(response) {
         const sourcesHeader = response.headers.get("x-sources");
         const sources = sourcesHeader ? JSON.parse((Buffer.from(sourcesHeader, 'base64')).toString('utf8')) : [];
