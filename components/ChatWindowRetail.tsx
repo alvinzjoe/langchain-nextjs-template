@@ -12,7 +12,7 @@ import { ChatMessageBubble } from "@/components/ChatMessageBubble";
 import { IntermediateStep } from "./IntermediateStep";
 import type { AgentStep } from 'langchain/agents';
 
-export function ChatWindowNew(props: {
+export function ChatWindowRetail(props: {
   endpoint: string,
   placeholder?: string,
   titleText?: string,

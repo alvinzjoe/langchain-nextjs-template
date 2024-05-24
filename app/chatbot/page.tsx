@@ -1,8 +1,8 @@
-import { ChatWindowNew } from "@/components/ChatWindowRetail";
+import { ChatWindowRetail } from "@/components/ChatWindowRetail";
 
 export default function AgentsPage() {
   return (
-    <ChatWindowNew
+    <ChatWindowRetail
       endpoint="api/chat/retrieval_agents"
       showIngestForm={true}
       showIntermediateStepsToggle={true}
